@@ -1,0 +1,97 @@
+
+You need to cite all sources you rely on with in-text style. References should be in Harvard format.
+
+
+
+part A(300 words)
+
+There is a text file (“papers.txt” is uploaded in Moodle) about
+computer science bibliography. Each line of this file describes the
+details of one paper in the following format:
+Authors|Title|Conference|Year. The different fields are separated by
+the “|”character, and the list of authors are separated by commas (“,”).
+An example line is given below:
+D Zhang, J Wang, D Cai, J Lu|Self-Taught Hashing for Fast Similarity Search|SIGIR|2010
+You can assume that there are no duplicate records, and each distinct
+author or conference as a different name.
+TASK: Please write a MapReduce program to calculate for each
+conference the number of papers.
+Requirement: Please include your MapReduce pseudo code (or real
+Java code) and the detailed description of your algorithm including
+main functions (and their functionalities), execution steps,
+performance analysis in the report.
+
+PART B: Big Data Project Analysis
+
+Precision agriculture (PA) is the science of improving crop yields and
+assisting management decisions using high technology sensor and
+analysis tools. The AgrBIG company is a leading provider of
+agronomy services, technology and strategic advice. They plan to
+develop a big data system. The users can be farmers, research
+laboratories, policy makers, public administration, consulting or
+logistic companies, etc. The system aims to help worldwide users
+better understanding the implications of the weather and making
+contingency plans; buying supplies, such as fertilizer and seeds; as
+well as maintaining and monitoring the quality of yield, whether
+livestock or crops; knowing the variety of cultivated plants,
+conditions of its growth and its needs of seeds; choosing the type of
+fertilizer and pesticides, understanding their employment conditions
+and their impact on the climate- soil-plant; recognizing daily water
+needs for each kind of plant; calculating the median and mean values
+of yield; studying the conditions of natural environment; estimating
+the financial revenue and manage the potential risks.
+The sources of data will be from various Sensors, Satellites, Drones,
+Social media, Market data, Online news feed, Logistic Corporate data,
+etc..
+Example Data
+Streaming  : Soil Sensor data, Streaming
+             Agricultural product prices (from
+             Market data vendors)
+Batch : Historical Weather Data
+On-Line : Online news feed
+Unstructured : Satellite Image Data, Drone
+               Video Data, Text
+
+Note that some data such as price and customer data are confidential.
+The data volume is expected to be 300 Petabytes. The applications
+need to be highly available, scalable and accessible from worldwide.
+You need to design a big data project by solving the following tasks
+for the AgrBIG company:
+
+Task1 (25 marks): Produce a Big Data Architecture for the AgrBIG
+company with the following components in detail:
+- Data sources,
+- Data extraction and cleaning,
+- Data storage,
+- Batch processing,
+- Real time message ingestion,
+- Analytical Data store
+For each of the above, discuss various options and produce your
+recommendation which best meets the business requirement.
+
+Task2 (10 marks): The AgrBIG company needs to store a large
+collection of plants, corps, diseases, symptoms, pests and their
+relationships. They also want to facilitate queries such as: "find all
+corn diseases which are directly or indirectly caused by Zinc
+deficiency". Please recommend a data store for that purpose and
+justify your choice.
+
+Task3 (10 marks): MapReduce has become the standard for
+performing batch processing on big data analysis tasks. However,
+data analysists and researchers in the AgrBIG company found that
+MapReduce coding can be quite challenging to them for data analysis
+tasks. Please recommend an alternative way for those people who are
+more familiar with SQL language to do the data analysis tasks or
+business intelligence tasks on big data and justify your
+recommendation.
+
+Task 4 (15 marks): The AgrBIG company needs near real time
+performance for some services such as soil moisture prediction
+service. It has been suggested the parallel distributed processing on a
+cluster should use MapReduce to process this requirement. Provide a
+detailed assessment of whether MapReduce is optimal to meet this
+requirement and If not, what would be the best approach.
+
+Task 5 (10 marks): Design a detailed hosting strategy for this Big
+Data project and how this will meet the scalability, high availability
+requirements for this global business.
