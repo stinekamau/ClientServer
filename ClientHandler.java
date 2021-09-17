@@ -159,15 +159,7 @@ public class ClientHandler implements Runnable {
 
                     String s="200 OK"+"\n"+"The  list of the active users:"+"\n"+current_users;
                     outputToClient.writeUTF(s);
-//                    outputToClient.writeUTF("The  list of the active users:");
-//                    Set set=MultiServerJPB1.current.entrySet();
-//                    Iterator i=set.iterator();
-//                    while(i.hasNext())
-//                    {
-//                        Map.Entry item=(Map.Entry)i.next();
-//                        outputToClient.writeUTF(item.getKey()+": "+item.getValue());
-//
-//                    }
+
 
                 }
                 else if (strReceived.startsWith("shutdown")) {
@@ -185,12 +177,7 @@ public class ClientHandler implements Runnable {
                     System.exit(1);
                      //get out of loop
                 }
-//                else if (strReceived.equalsIgnoreCase("add")) {
-//                    System.out.println("adding handlet client " +
-//                            clientNumber);
-//                    outputToClient.writeUTF("handler was added " +
-//                            clientNumber + "!");
-//                }
+
                 else if (strReceived.equalsIgnoreCase("quit")) {
                     System.out.println("Shutting down server...");
                     outputToClient.writeUTF("Shutting down server...");

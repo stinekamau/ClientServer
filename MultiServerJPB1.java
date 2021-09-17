@@ -116,28 +116,7 @@ public class MultiServerJPB1 {
                 Thread clientThread = new Thread(
                         new ClientHandler(clientNumber, socket, serverSocket));
                 clientThread.start();
-//                while(true) {
-//                String strReceived = inputFromClient.readUTF();
-//                outputToClient.writeUTF(strReceived);
-//
-//                if(strReceived.equalsIgnoreCase("add")) {
-//                    System.out.println("addin client");
-//                    outputToClient.writeUTF("client was added!");
-//                }
-////                else if(strReceived.equalsIgnoreCase("quit")) {
-//                    System.out.println("Shutting down server...");
-//                    outputToClient.writeUTF("Shutting down server...");
-//                    serverSocket.close();
-//                    socket.close();
-//                   break;  //get out of loop
-//                }
-//               else {
-//                   System.out.println("Unknown command received: "
-//                      + strReceived);
-//                   outputToClient.writeUTF("Unknown command.  "
-//                            + "Please try again.");
-//                }
-//                }
+
             }//end while
         } catch (IOException ex) {
             ex.printStackTrace();
@@ -146,54 +125,3 @@ public class MultiServerJPB1 {
     }//end createMultithreadCommunicationLoop
 }
     
-//    public static void createCommunicationLoop() {
-//        try {
-//            //create server socket
-//            ServerSocket serverSocket =
-//                    new ServerSocket(SERVER_PORT);
-//
-//            System.out.println("Server started at " +
-//                    new Date() + "\n");
-//            //listen for a connection
-//            //using a regular *client* socket
-//            Socket socket = serverSocket.accept();
-//
-//            //now, prepare to send and receive data
-//            //on output streams
-//            DataInputStream inputFromClient =
-//                    new DataInputStream(socket.getInputStream());
-//
-//            DataOutputStream outputToClient =
-//                    new DataOutputStream(socket.getOutputStream());
-//
-//            //server loop listening for the client
-//            //and responding
-////            while(true) {
-////                String strReceived = inputFromClient.readUTF();
-//
-//
-////                if(strReceived.equalsIgnoreCase("add")) {
-////                    System.out.println("addin client");
-////                    outputToClient.writeUTF("client was added!");
-////                }
-////                else if(strReceived.equalsIgnoreCase("quit")) {
-////                    System.out.println("Shutting down server...");
-////                    outputToClient.writeUTF("Shutting down server...");
-////                    serverSocket.close();
-////                    socket.close();
-////                    break;  //get out of loop
-////                }
-////                else {
-////                    System.out.println("Unknown command received: "
-////                        + strReceived);
-////                    outputToClient.writeUTF("Unknown command.  "
-////                            + "Please try again.");
-////
-////                }
-////            }//end server loop
-////        }
-//        catch(IOException ex) {
-//            ex.printStackTrace();
-//        }//end try-catch
-////    }//end createCommunicationLoop
-//        }
